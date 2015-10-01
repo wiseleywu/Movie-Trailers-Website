@@ -11,3 +11,7 @@ This project provides server-side code in python to store a list of movies, incl
 * media.py - contains the definition of class "Movie"
 * entertainment_center.py - contains instantiation of various Movie classes, list of all Movie classes, and the code to open the resulted webpage
 * fresh_tomatoes.py - A Python module provided by Udacity, modified with addiationl CSS stylings and display storyline as hover text
+
+##How to run
+
+Simply clone the directory and execute entertainment_center.py, a browser window will open with the movies trailer website
