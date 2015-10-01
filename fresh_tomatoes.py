@@ -18,6 +18,7 @@ main_page_head = '''
     <style type="text/css" media="screen">
         body {
             padding-top: 80px;
+            background-color: #33CCCC;
         }
         #trailer .modal-dialog {
             margin-top: 200px;
@@ -37,9 +38,10 @@ main_page_head = '''
         .movie-tile {
             margin-bottom: 20px;
             padding-top: 20px;
+            font-family: Lucida Console;
         }
         .movie-tile:hover {
-            background-color: #EEE;
+            background-color: #2EB8B8;
             cursor: pointer;
         }
         .scale-media {
@@ -54,6 +56,9 @@ main_page_head = '''
             left: 0;
             top: 0;
             background-color: white;
+        }
+        .navbar-band {
+            font-family:Verdana;
         }
     </style>
     <script type="text/javascript" charset="utf-8">
@@ -121,7 +126,7 @@ main_page_content = '''
 # A single movie entry html template
 movie_tile_content = '''
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
-    <img src="{poster_image_url}" width="220" height="342">
+    <img src="{poster_image_url}" title="{storyline}" width="220" height="342">
     <h2>{movie_title}</h2>
 </div>
 '''
@@ -142,6 +147,7 @@ def create_movie_tiles_content(movies):
         # Append the tile for the movie with its content filled in
         content += movie_tile_content.format(
             movie_title=movie.title,
+            storyline=movie.storyline,
             poster_image_url=movie.poster_image_url,
             trailer_youtube_id=trailer_youtube_id
         )
