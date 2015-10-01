@@ -1,6 +1,10 @@
+# -*- coding: utf-8 -*-
 import media
 import fresh_tomatoes
 
+"""The following code instantiates various Movie objects with 
+   specified attributes"""
+   
 avatar=media.Movie("Avatar",
                      "A paraplegic marine dispatched to the moon Pandora on a "
                      "unique mission becomes torn between following his orders "
@@ -99,6 +103,9 @@ toy_story = media.Movie("Toy Story",
                         "https://upload.wikimedia.org/wikipedia/en/1/13/"
                         "Toy_Story.jpg",
                         "https://www.youtube.com/watch?v=KYz2wyBy3kc")
+
+"""The following code creates a list of Movie objects that will be used
+   by fresh_tomatoes.open_movie_page to generate the final webpage"""
 
 movies = [avatar, 
           hunger_games,
